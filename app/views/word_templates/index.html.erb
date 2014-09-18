@@ -1,0 +1,17 @@
+{{ words.greeting }}
+
+
+
+<form ng-submit="words.addWord(newWord)">
+  <input type="text" ng-model="newWord.name" ng-keyup="words.complete(newWord.name)">
+  <div ng-repeat="word in words.suggestions" style="background-color: rgb(230,230,250); margin-top: 5px;">
+    {{word}}
+  </div>
+
+  <input type="text" ng-model="newWord.description">
+  <button> Save Word </button>
+</form>
+
+<div ng-repeat="word in words.words">
+  {{word.name}}
+</div>
