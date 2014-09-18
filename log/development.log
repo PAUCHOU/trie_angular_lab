@@ -5157,3 +5157,182 @@ Processing by WordsController#create as JSON
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "words" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-09-18 03:02:06.252901"], ["name", "zoe"], ["updated_at", "2014-09-18 03:02:06.252901"]]
   [1m[35m (0.8ms)[0m  COMMIT
 Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-18 09:42:29 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/delmerreed/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/delmerreed/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/delmerreed/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/delmerreed/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/delmerreed/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/delmerreed/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/delmerreed/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/delmerreed/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/delmerreed/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WordsController#index as HTML
+  Rendered layouts/application.html.erb within layouts/application (74.7ms)
+Filter chain halted as :render_layout_if_html rendered or redirected
+Completed 200 OK in 141ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/word_templates.css?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/angular/angular.min.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/angular-route/angular-route.min.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/words/main.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/words/word_controllers.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/words/word_factories.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/words/word_router.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+
+
+Started GET "/word_templates" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+Processing by WordTemplatesController#index as HTML
+  Rendered word_templates/index.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/words.json" for 127.0.0.1 at 2014-09-18 09:42:41 -0700
+Processing by WordsController#index as JSON
+  [1m[35mWord Load (2.6ms)[0m  SELECT "words".* FROM "words"
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-18 09:44:15 -0700
+Processing by WordsController#index as HTML
+  Rendered layouts/application.html.erb within layouts/application (42.2ms)
+Filter chain halted as :render_layout_if_html rendered or redirected
+Completed 200 OK in 87ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/word_templates.css?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/angular/angular.min.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/angular-route/angular-route.min.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/words/main.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/words/word_controllers.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/words/word_factories.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/words/word_router.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+
+
+Started GET "/word_templates" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+Processing by WordTemplatesController#index as HTML
+  Rendered word_templates/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/words.json" for 127.0.0.1 at 2014-09-18 09:44:16 -0700
+Processing by WordsController#index as JSON
+  [1m[36mWord Load (0.6ms)[0m  [1mSELECT "words".* FROM "words"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
